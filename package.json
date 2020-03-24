@@ -1,0 +1,23 @@
+{
+  "name": "pi-digit",
+  "version": "1.0.0",
+  "description": "A simple test app to efficiently return the n digit of pi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmcgui05/pi-digit.git"
+  },
+  "author": "John McGuirk <johnmac81@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmcgui05/pi-digit/issues"
+  },
+  "homepage": "https://github.com/jmcgui05/pi-digit#readme",
+  "dependencies": {
+    "pi": "^2.0.3",
+    "restify": "^8.5.1"
+  }
+}
