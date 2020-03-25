@@ -1,18 +1,18 @@
-// Lets go ahead and use a library for calculating PI
-const PI = require("pi");
+
+const utils = require("../utils");
 
 const piHandler = function respond(req, res, next) {
     try {
-        console.time("piCalc");
+        console.time("piHandler");
 
         // Get the value of pi up to the target, and remove the decimal
-        let piValue = PI(req.params.n).toString().replace(".", "");
+        let piValue = utils.getPiToDigitN(req.params.n);
 
         let indexOfTarget = parseInt(req.params.n) - 1;
 
         const targetDigit = piValue.charAt(indexOfTarget);
         res.send("The value of the pi digit at n is " + targetDigit);
-        console.timeEnd("piCalc");
+        console.timeEnd("piHandler");
         next();
     } catch (err) {
         console.log("ERR: " + err);
