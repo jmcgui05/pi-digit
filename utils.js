@@ -14,17 +14,14 @@ function memoize(originalFunc) {
     return (...args) => {
         // Check cahce for previously calculated result
         if (cache[args]) {
-            console.timeEnd("memoized");
             return cache[args];
         }
         // Apply the args array [n] to the originalFunc and cache the result for next call
         const result = originalFunc.apply(this, args);
         cache[args] = result;
-        console.timeEnd("memoized");
         return result;
 
     }
-    console.timeEnd("memoized");
 }
 
 getPiToDigitN = memoize(getPiToDigitN);

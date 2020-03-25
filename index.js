@@ -12,4 +12,6 @@ server.get('/pi/:n', piAPI.piHandler);
 
 server.listen(port, () => {
     console.log('server listening at port %s', port);
-})
+});
+
+module.exports = server;

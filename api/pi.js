@@ -3,8 +3,6 @@ const utils = require("../utils");
 
 const piHandler = function respond(req, res, next) {
     try {
-        console.time("piHandler");
-
         // Get the value of pi up to the target, and remove the decimal
         let piValue = utils.getPiToDigitN(req.params.n);
 
@@ -12,7 +10,6 @@ const piHandler = function respond(req, res, next) {
 
         const targetDigit = piValue.charAt(indexOfTarget);
         res.send("The value of the pi digit at n is " + targetDigit);
-        console.timeEnd("piHandler");
         next();
     } catch (err) {
         console.log("ERR: " + err);
